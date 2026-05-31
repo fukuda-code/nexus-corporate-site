@@ -1,0 +1,52 @@
+.split-loader-y {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+}
+
+.split-y {
+    flex: 1;
+    background: #000;
+    transform: translateY(0);
+    transition: transform 1s cubic-bezier(.77, 0, .18, 1);
+}
+
+.split-y.top {
+    position: relative;
+    border-bottom: 1px solid transparent;
+    transition: transform 1s cubic-bezier(.77, 0, .18, 1), border-bottom-color 0.2s ease;
+}
+
+.split-y.top::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #0af;
+    box-shadow: 0 0 12px 3px #0af, 0 0 30px 8px rgba(0, 170, 255, 0.4);
+    animation: draw-line 0.8s cubic-bezier(.4, 0, .6, 1) 0.3s forwards;
+}
+
+@keyframes draw-line {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+.split-loader-y.open .split-y.top {
+    transform: translateY(-100%);
+    border-bottom-color: transparent;
+}
+
+.split-loader-y.open .split-y.top::after {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.split-loader-y.open .split-y.bottom {
+    transform: translateY(100%);
+}
