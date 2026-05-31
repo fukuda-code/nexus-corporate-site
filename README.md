@@ -1,5 +1,7 @@
 # Nexus – コーポレートサイト制作課題
 
+🔗 [サイトを見る](https://fukuda-code.github.io/nexus-corporate-site/)
+
 職業訓練校（3ヶ月）の個人制作課題として、7日間で架空のIT企業「Nexus」のコーポレートサイトを制作しました。
 企業サイトとしての構成・デザインを意識して作成しています。
 
@@ -21,9 +23,10 @@
 ## デザインカンプ
 
 制作前にワイヤーフレーム・デザインカンプを作成しました。
-- design_top.png（TOPページ）
-- design_under.png（下層ページ）
-  
+
+- [TOPページ](design_top.png)
+- [下層ページ](design_under.png)
+
 ## 使用技術
 
 - HTML5 / CSS3
@@ -72,7 +75,9 @@ works/
 ```
 
 ## 制作期間
+
 7日
 
 ## 画像素材
+
 Storyset / unDraw / Unsplash
