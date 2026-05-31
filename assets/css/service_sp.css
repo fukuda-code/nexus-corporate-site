@@ -1,0 +1,84 @@
+@media (max-width: 768px) {
+
+    .hero {
+        height: 400px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+        letter-spacing: 4px;
+        padding: 0 16px;
+        text-align: center;
+        box-sizing: border-box;
+          position: relative;  /* ← 追加 */
+  z-index: 10;         /* ← 追加 */
+    }
+
+    /* =========================
+       MAIN HEADING
+    ========================== */
+    .main-heading {
+        font-size: 24px;
+        letter-spacing: 4px;
+        margin: 48px 0;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    /* カード外側の余白（ブラウザ端とくっつかない） */
+    .service-section {
+        width: 100%;
+        padding: 0 32px;
+        box-sizing: border-box;
+    }
+
+    /* カード本体（SPでは縦並びに統一） */
+    .service-card {
+        display: flex;
+        flex-direction: column;
+        /* ← SPでは必ず縦並び */
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        /* ← 高さ固定を解除 */
+        margin: 0 auto 32px;
+        border-radius: 32px;
+        overflow: hidden;
+        /* ← 画像がはみ出さない */
+    }
+
+    .service-card h3 {
+        text-align: center;
+    }
+
+    .service-card.reverse {
+        flex-direction: column;
+    }
+
+    /* カラム幅を100%に */
+    .col {
+        width: 100%;
+        height: auto;
+    }
+
+    /* テキスト側の余白 */
+    .text-col {
+        padding: 32px;
+    }
+
+    /* 画像をカード内に収める（見切れ防止） */
+    .image-col {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image-col img {
+        width: 50%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+    }
+}

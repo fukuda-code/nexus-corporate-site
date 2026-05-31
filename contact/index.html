@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>NEXUS - お問い合わせ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="stylesheet" href="../assets/css/contact.css">
+  <link rel="stylesheet" href="../assets/css/contact_sp.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <script src="../assets/js/script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- =========================
+       ヘッダー
+  ========================== -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <img src="../assets/images/logo_blue.svg" alt="NEXUSロゴ">
+      </a>
+
+      <nav class="nav">
+        <ul>
+          <li><a href="../index.html">HOME</a></li>
+          <li><a href="../about/index.html">会社概要</a></li>
+          <li><a href="../service/index.html">事業内容</a></li>
+          <li><a href="index.html">お問い合わせ</a></li>
+          <li><a href="../access/index.html">アクセス</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" aria-label="menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+
+  <section class="contact">
+    <h1 class="contact-title">お問い合わせ</h1>
+    <p class="contact-lead">
+      サービスに関するご質問・ご相談は、下記フォームよりお気軽にお問い合わせください。
+    </p>
+
+    <form class="contact-form" novalidate>
+      <!-- お名前 -->
+      <div class="form-row">
+        <label for="name">お名前<span class="required">必須</span></label>
+        <input id="name" name="name" type="text" required placeholder="例）山田 太郎">
+        <span class="error">お名前を入力してください。</span>
+      </div>
+
+      <!-- メールアドレス -->
+      <div class="form-row">
+        <label for="email">メールアドレス<span class="required">必須</span></label>
+        <input id="email" name="email" type="email" required placeholder="例）example@nexus.co.jp">
+        <span class="error">正しいメールアドレスを入力してください。</span>
+      </div>
+
+      <!-- 会社名 -->
+      <div class="form-row">
+        <label for="company">会社名</label>
+        <input id="company" name="company" type="text" placeholder="例）株式会社Nexus">
+        <span class="error"></span>
+      </div>
+
+      <!-- 件名 -->
+      <div class="form-row">
+        <label for="subject">件名<span class="required">必須</span></label>
+        <input id="subject" name="subject" type="text" required placeholder="お問い合わせ内容">
+        <span class="error">件名を入力してください。</span>
+      </div>
+
+      <!-- お問い合わせ内容 -->
+      <div class="form-row">
+        <label for="message">お問い合わせ内容<span class="required">必須</span></label>
+        <textarea id="message" name="message" rows="6" required placeholder="できるだけ具体的にご記入ください。"></textarea>
+        <span class="error">お問い合わせ内容を入力してください。</span>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit">
+          <i class="ti ti-send" aria-hidden="true"></i>送信する
+        </button>
+    </form>
+  </section>
+
+
+
+  <!-- =========================
+       フッター
+  ========================== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="../index.html">HOME</a></li>
+          <li><a href="../about/index.html">会社概要</a></li>
+          <li><a href="../service/index.html">事業内容</a></li>
+          <li><a href="index.html">お問い合わせ</a></li>
+          <li><a href="../access/index.html">アクセス</a></li>
+        </ul>
+      </nav>
+      <p class="copy">&copy; 2026 NEXUS</p>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="ページ上部へ戻る">↑</button>
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+@media (max-width: 768px) {
+
+    .company {
+        padding: 0 20px;
+        margin: 40px auto;
+    }
+
+    .company-row {
+        grid-template-columns: 1fr; /* ← 1 カラムに崩す */
+        row-gap: 6px;
+        padding: 18px 0;
+    }
+
+    .company-label {
+        font-size: 14px;
+    }
+
+    .company-value {
+        font-size: 14px;
+    }
+}

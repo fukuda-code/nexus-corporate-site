@@ -1,0 +1,103 @@
+@media (max-width: 768px) {
+
+    /* =========================
+       HERO
+    ========================== */
+    .hero {
+        height: 400px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+        letter-spacing: 4px;
+        padding: 0 16px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+
+    /* =========================
+       MAIN HEADING
+    ========================== */
+    .main-heading {
+        font-size: 24px;
+        letter-spacing: 4px;
+        margin: 48px 0;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+
+    /* =========================
+       SERVICES（カード）
+    ========================== */
+    .services {
+        max-width: 100%;
+        width: 100%;
+        margin: 32px auto;
+        padding: 0 32px;
+        box-sizing: border-box;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+        /* ← 1カラム */
+        gap: 32px;
+    }
+
+    .service-card {
+        width: 100%;
+        height: auto;
+        padding: 32px;
+        overflow: hidden;
+    }
+
+    .service-card img {
+        width: 50%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .service-card h3 {
+        font-size: 24px;
+    }
+
+    .service-card p {
+        font-size: 16px;
+    }
+
+    .service-card .btn {
+        width: auto;
+        min-width: unset;
+        align-self: center;
+    }
+
+
+    /* =========================
+       NEWS
+    ========================== */
+    .news-title,
+    .news-list {
+        max-width: 100%;
+        width: 100%;
+        padding-left: 64px;
+        padding-right: 64px;
+        box-sizing: border-box;
+    }
+
+    .news-title {
+        font-size: 20px;
+        margin-top: 48px;
+    }
+
+    .news-list {
+        font-size: 14px;
+    }
+
+    .news-list li {
+        padding: 12px 0;
+    }
+
+}

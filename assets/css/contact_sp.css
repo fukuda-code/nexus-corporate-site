@@ -1,0 +1,7 @@
+@media (max-width: 768px) {
+  .contact button[type="submit"] {
+    width: auto;
+    min-width: 160px;
+    padding: 0 24px;
+  }
+}

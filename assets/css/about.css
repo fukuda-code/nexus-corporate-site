@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", "Noto Sans JP", sans-serif;
+}
+
+.company {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 40px;
+}
+
+.company-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    letter-spacing: 0.05em;
+}
+
+.company-row {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    padding: 22px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.company-label {
+    font-weight: 600;
+    color: #333;
+    font-size: 15px;
+}
+
+.company-value {
+    color: #444;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+

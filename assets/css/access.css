@@ -1,0 +1,50 @@
+.body {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.access {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 40px;
+}
+
+.access-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    letter-spacing: 0.05em;
+}
+
+.access-row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    padding: 22px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.access-label {
+    font-weight: 600;
+    color: #333;
+    font-size: 15px;
+}
+
+.access-value {
+    color: #444;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.access-map {
+    margin-top: 40px;
+}
+
+.access-map iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 12px;
+    display: block;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}

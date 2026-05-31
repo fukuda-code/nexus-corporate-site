@@ -1,0 +1,344 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    color: #000;
+    overflow-x: hidden;
+}
+
+.body {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 16px共通タイポ */
+p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    letter-spacing: 0.01rem;
+    color: #333;
+}
+
+/* ========================================
+   header
+   ======================================== */
+
+.header {
+    width: 100%;
+    background: #fff;
+    position: relative;
+    /* ← 追加 */
+    z-index: 100;
+    /* ← 追加 */
+}
+
+.header-inner {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.logo img {
+    width: 160px;
+    height: 62px;
+    object-fit: contain;
+}
+
+/* NAV */
+.nav ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav li {
+    margin: 0;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    letter-spacing: 2px;
+    padding: 8px 0;
+    transition: 0.2s;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* footer */
+.footer {
+    width: 100%;
+    background: #fff;
+    padding: 32px 0;
+}
+
+.footer-inner {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 32px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-nav ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+}
+
+.footer-nav li {
+    margin: 0;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: 0.2s;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.copy {
+    font-size: 14px;
+    color: #000;
+}
+
+/* ハンバーガー初期状態（PCでは非表示） */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    width: 32px;
+    height: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #000;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.to-top {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #000;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    z-index: 9999;
+}
+
+/* 表示状態 */
+.to-top.show {
+    opacity: 0.8;
+    pointer-events: auto;
+}
+
+.to-top:hover {
+    opacity: 1;
+}
+
+/* =========================
+   上下スプリットローディング
+========================= */
+.split-loader-y {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+}
+
+.split-y {
+    flex: 1;
+    background: #000;
+    transform: translateY(0);
+    transition: transform 1s cubic-bezier(.77, 0, .18, 1);
+}
+
+.split-y.top {
+    position: relative;
+    border-bottom: 1px solid transparent;
+    transition: transform 1s cubic-bezier(.77, 0, .18, 1), border-bottom-color 0.2s ease;
+}
+
+.split-y.top::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #0af;
+    box-shadow: 0 0 12px 3px #0af, 0 0 30px 8px rgba(0, 170, 255, 0.4);
+    animation: draw-line 0.8s cubic-bezier(.4, 0, .6, 1) 0.3s forwards;
+}
+
+@keyframes draw-line {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.split-loader-y.open .split-y.top {
+    transform: translateY(-100%);
+    border-bottom-color: transparent;
+}
+
+.split-loader-y.open .split-y.top::after {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.split-loader-y.open .split-y.bottom {
+    transform: translateY(100%);
+}
+
+@media (max-width: 768px) {
+
+    /* =========================
+       HEADER
+    ========================== */
+    .header-inner {
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    .nav ul {
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .nav a {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    .logo img {
+        width: 160px;
+        height: 62px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+    .footer-inner {
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    .footer-nav ul {
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+    }
+
+    .footer-nav a {
+        font-size: 12px;
+    }
+
+    .copy {
+        font-size: 12px;
+        text-align: center;
+        margin-top: 16px;
+    }
+
+    /* ハンバーガー表示 */
+    .hamburger {
+        display: flex;
+    }
+
+    /* NAV を最初は非表示 */
+    .nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background: #fff;
+        padding: 16px 0;
+        z-index: 200;
+        box-shadow: 0 6px 8px -4px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+
+    /* 開いたとき */
+    .nav.active {
+        display: block;
+    }
+
+    /* ハンバーガー → × に変形 */
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}

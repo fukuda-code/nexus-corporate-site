@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>NEXUS - 事業内容</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/reset.css">
+	<link rel="stylesheet" href="../assets/css/common.css">
+	<link rel="stylesheet" href="../assets/css/service.css">
+	<link rel="stylesheet" href="../assets/css/service_sp.css">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" href="../assets/images/favicon.png">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+	<script src="../assets/js/script.js" defer></script>
+	<script src="../assets/js/service.js" defer></script>
+
+</head>
+
+<body>
+
+	<!-- =========================
+       ヘッダー
+  ========================== -->
+	<header class="header">
+		<div class="header-inner">
+			<a href="../index.html" class="logo">
+				<img src="../assets/images/logo_blue.svg" alt="NEXUSロゴ">
+			</a>
+
+			<nav class="nav">
+				<ul>
+					<li><a href="../index.html">HOME</a></li>
+					<li><a href="../about/index.html">会社概要</a></li>
+					<li><a href="index.html">事業内容</a></li>
+					<li><a href="../contact/index.html">お問い合わせ</a></li>
+					<li><a href="../access/index.html">アクセス</a></li>
+				</ul>
+			</nav>
+
+			<button class="hamburger" aria-label="menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+
+		</div>
+	</header>
+
+	<!-- =========================
+       HERO
+  ========================== -->
+	<section class="hero" id="vanta-hero">
+		<h2>AI時代を支えるITインフラストラクチャ</h2>
+	</section>
+
+	<!-- =========================
+       HERO下 見出し
+  ========================== -->
+	<h2 class="main-heading">ビジネス課題に対応する包括的なITソリューション</h2>
+
+
+	<section class="service-section">
+
+		<!-- クラウド（テキスト → 画像） -->
+		<article class="service-card" id="cloud">
+			<div class="col text-col">
+				<h2>クラウド<span id="cloud-icon"></span></h2>
+				<p>
+					クラウド基盤の設計・構築から運用・監視まで、柔軟で拡張性の高い環境を一貫して提供します。AWS・Azure・GCPなど主要クラウドプラットフォームに対応し、お客様のビジネス規模や要件に最適なアーキテクチャを提案します。コスト最適化やセキュリティ強化、マイグレーション支援など、クラウド活用のあらゆるフェーズをトータルでサポートします。
+				</p>
+			</div>
+			<div class="col image-col">
+				<img src="../assets/images/service/cloud.png" alt="クラウドサービス">
+			</div>
+		</article>
+
+		<!-- ネットワーク（画像 → テキスト） -->
+		<article class="service-card reverse" id="network">
+			<div class="col image-col">
+				<img src="../assets/images/service/network.png" alt="ネットワークサービス">
+			</div>
+			<div class="col text-col">
+				<h2>ネットワーク</h2>
+				<p>
+					安全性と可用性を重視したネットワーク設計で、安定した通信インフラを実現します。拠点間VPNやSD-WANの導入から、ファイアウォール・UTMによるセキュリティ対策まで幅広く対応します。障害発生時の迅速な復旧体制も整備し、ビジネスの継続性を損なわないネットワーク環境をご提供します。
+				</p>
+			</div>
+		</article>
+
+		<!-- システム開発（テキスト → 画像） -->
+		<article class="service-card" id="system">
+			<div class="col text-col">
+				<h2>システム開発</h2>
+				<p>
+					業務要件に合わせたシステム開発で、ビジネスの効率化と価値向上を支援します。要件定義から設計・開発・テスト・リリースまで一貫した開発体制のもと、品質の高いシステムをお届けします。アジャイル開発にも対応しており、変化するビジネス環境に柔軟に適応しながら、迅速なシステム改善を継続的に行います。
+				</p>
+				</p>
+			</div>
+			<div class="col image-col">
+				<img src="../assets/images/service/system.png" alt="システム開発">
+			</div>
+		</article>
+
+		<!-- 運用保守（画像 → テキスト） -->
+		<article class="service-card reverse" id="server">
+			<div class="col image-col">
+				<img src="../assets/images/service/server.png" alt="運用保守">
+			</div>
+			<div class="col text-col">
+				<h2>運用保守</h2>
+				<p>
+					24時間365日の運用・保守体制で、システムの安定稼働を継続的にサポートします。専任のエンジニアが常時監視を行い、障害の予兆検知から迅速な対応まで一貫して対応します。定期的なメンテナンスやバージョンアップ対応も含め、長期にわたってシステムのパフォーマンスと信頼性を維持します。
+				</p>
+			</div>
+		</article>
+
+	</section>
+
+
+
+
+	<!-- =========================
+       フッター
+  ========================== -->
+	<footer class="footer">
+		<div class="footer-inner">
+			<nav class="footer-nav">
+				<ul>
+					<li><a href="../index.html">HOME</a></li>
+					<li><a href="../about/index.html">会社概要</a></li>
+					<li><a href="index.html">事業内容</a></li>
+					<li><a href="../contact/index.html">お問い合わせ</a></li>
+					<li><a href="../access/index.html">アクセス</a></li>
+				</ul>
+			</nav>
+			<p class="copy">&copy; 2026 NEXUS</p>
+		</div>
+	</footer>
+
+	<button class="to-top" aria-label="ページ上部へ戻る">↑</button>
+
+</body>
+
+</html>
