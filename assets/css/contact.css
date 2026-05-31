@@ -1,5 +1,5 @@
 .contact {
-  max-width: 1200px;
+  max-width: 800px;
   margin: 80px auto;
   padding: 0 40px;
 }
@@ -9,12 +9,14 @@
   font-weight: 600;
   margin-bottom: 12px;
   letter-spacing: 0.05em;
+  text-align: center;
 }
 
 .contact .contact-lead {
   font-size: 16px;
   color: #555;
   margin-bottom: 32px;
+  text-align: center;
 }
 
 .contact .contact-form {
