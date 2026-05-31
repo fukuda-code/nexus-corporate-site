@@ -80,8 +80,8 @@ window.addEventListener("resize", onResize);
 function animate() {
     requestAnimationFrame(animate);
     points.rotation.y += 0.0005;
-    points.rotation.x += mouseY * 0.005;
-    points.rotation.y += mouseX * 0.005;
+    points.rotation.x += mouseY * 0.003;
+    points.rotation.y += mouseX * 0.003;
     renderer.render(scene, camera);
 }
 
